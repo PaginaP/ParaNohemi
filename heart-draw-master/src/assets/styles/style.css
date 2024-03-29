@@ -1,0 +1,125 @@
+:root {
+    --custom-red: #F20707;
+    --custom-red-box: rgba(242, 7, 7, 0.6);
+    --custom-black: #202124;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',cursive;
+}
+
+
+#lyrics {
+   margin-top: 80px;
+    font-size: 20px;
+    color: white;
+    animation: lyrics_2 7s ease-in-out forwards;
+  }  
+  @keyframes lyrics_2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+
+.text_1{
+    text-align: center;
+    font-size: 30px;
+   
+     color: white;
+    animation: p_1 5s ease-in-out forwards;
+   
+}
+
+@keyframes p_1 {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .botones a{
+    background-color: #900ae9;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+  
+  }
+.button :hover{
+    background-color: rgb(57, 209, 209);
+}
+  
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+.container {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart {
+    border: none;
+    width: 150px;
+    height: 150px;
+    background-color: var(--custom-red);
+    transform: rotate(45deg);
+    animation: beat 1.5s ease-in-out infinite;
+}
+.heart::before, .heart::after {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-color: var(--custom-red);
+    border-radius: 100%;
+    box-shadow: 0 0 155px var(--custom-red-box); 
+}
+.heart::before {
+    transform: translateY(-70px);
+}
+.heart::after {
+    transform: translate(-70px);
+}
+@keyframes beat {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(0.8);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
